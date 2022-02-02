@@ -1,0 +1,334 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.24f1 (79c78de19888) revision 7980941'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Education' Language: 'pl' Physical Memory: 8104 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+E:\Programy\Unity\2020.3.24f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/Workspace/GitHub/IN_MARI_VIA_TUA/IMVT
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64008
+Successfully changed project path to: E:/Workspace/GitHub/IN_MARI_VIA_TUA/IMVT
+E:/Workspace/GitHub/IN_MARI_VIA_TUA/IMVT
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 93.67 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.94 ms.
+Initialize engine version: 2020.3.24f1 (79c78de19888)
+[Subsystems] Discovering subsystems at path E:/Programy/Unity/2020.3.24f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Workspace/GitHub/IN_MARI_VIA_TUA/IMVT/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 740M (ID=0x1292)
+    Vendor:   
+    VRAM:     2009 MB
+    Driver:   25.21.14.2531
+Initialize mono
+Mono path[0] = 'E:/Programy/Unity/2020.3.24f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Programy/Unity/2020.3.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Programy/Unity/2020.3.24f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Programy/Unity/2020.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001361 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 89.82 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.964 seconds
+Domain Reload Profiling:
+	ReloadAssembly (965ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (800ms)
+			LoadAssemblies (76ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (308ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (260ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (90ms)
+				BeforeProcessingInitializeOnLoad (21ms)
+				ProcessInitializeOnLoadAttributes (107ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007813 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 95.43 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+[XR] OculusXRPlugin: registering subsystems
+[XR] Unable to register display lifecyle provider: [1]
+[XR] Oculus Input lifecycle provider registered.
+[XR] Unable to register input lifecyle provider: [1]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in E:\Workspace\GitHub\IN_MARI_VIA_TUA\IMVT\Library\PackageCache\com.unity.xr.oculus@1.11.2\Runtime\OculusLoader.cs:250 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in E:\Workspace\GitHub\IN_MARI_VIA_TUA\IMVT\Library\PackageCache\com.unity.xr.oculus@1.11.2\Runtime\OculusLoader.cs:235 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <695d1cc93cca45069c528c15c9fdd749>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00047] in <bbfbd5a71eea45d1a1354233c800516b>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.846 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1847ms)
+		BeginReloadAssembly (188ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (1584ms)
+			LoadAssemblies (147ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (527ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (634ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (96ms)
+				BeforeProcessingInitializeOnLoad (136ms)
+				ProcessInitializeOnLoadAttributes (367ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.09 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 3656 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.9 MB.
+System memory in use after: 175.1 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 4112.
+Total: 5.991000 ms (FindLiveObjects: 0.579200 ms CreateObjectMapping: 0.408500 ms MarkObjects: 4.882300 ms  DeleteObjects: 0.120000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/Sea.unity
+  artifactKey: Guid(8b35fbcf6f751fe42b85b3bd2c5214ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Sea.unity using Guid(8b35fbcf6f751fe42b85b3bd2c5214ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d97dfc6784943ba1a6ac4a5d0b2345b') in 0.025685 seconds 
+  Import took 0.033165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.233649 seconds.
+  path: Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/Editor/SampleStandaloneLoaderUI.cs
+  artifactKey: Guid(f20344b9494eebc47b9860adf04f6667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/Editor/SampleStandaloneLoaderUI.cs using Guid(f20344b9494eebc47b9860adf04f6667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '737685115d0bc2ad5677ab6535828066') in 0.034272 seconds 
+  Import took 0.043053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002678 seconds.
+  path: Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/SampleConstants.cs
+  artifactKey: Guid(9fcb2c0388adf4dae9b9d876af26062c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/SampleConstants.cs using Guid(9fcb2c0388adf4dae9b9d876af26062c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a109ac064e856a61dfa8a0f733cee3e') in 0.007208 seconds 
+  Import took 0.015605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008043 seconds.
+  path: Assets/Scenes/SampleSceneLightingSettings.lighting
+  artifactKey: Guid(477cc4148fad3449482a3bc3178594e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleSceneLightingSettings.lighting using Guid(477cc4148fad3449482a3bc3178594e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a26a52e718306fba651ad1c5ff177c0') in 0.011618 seconds 
+  Import took 0.018939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.036916 seconds.
+  path: Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs
+  artifactKey: Guid(476cc7d7cd9874016adc216baab94a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs using Guid(476cc7d7cd9874016adc216baab94a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28a1c48df5455ec8f9a4e64c6766f86c') in 0.006656 seconds 
+  Import took 0.013922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012058 seconds.
+  path: Assets/Samples/XR Interaction Toolkit/2.0.0-pre.6/Default Input Actions/XRI Default Input Actions.inputactions
+  artifactKey: Guid(c348712bda248c246b8c49b3db54643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Interaction Toolkit/2.0.0-pre.6/Default Input Actions/XRI Default Input Actions.inputactions using Guid(c348712bda248c246b8c49b3db54643f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01671cd33da9a295a30a92be702ca27e') in 0.024629 seconds 
+  Import took 0.032429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.023949 seconds.
+  path: Assets/TutorialInfo/Scripts/Readme.cs
+  artifactKey: Guid(fcf7219bab7fe46a1ad266029b2fee19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Scripts/Readme.cs using Guid(fcf7219bab7fe46a1ad266029b2fee19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43153c73d46c6cf684442b7768fcc020') in 0.007157 seconds 
+  Import took 0.014902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007418 seconds.
+  path: Assets/SeaScene/Shaders/MeshObject.shadergraph
+  artifactKey: Guid(1f95599bad554d14fa07c8ef243338b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Shaders/MeshObject.shadergraph using Guid(1f95599bad554d14fa07c8ef243338b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2958a7d3c0535c8c93625314e9a4a63') in 0.008739 seconds 
+  Import took 0.016534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006273 seconds.
+  path: Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/Editor/SampleMetadata.cs
+  artifactKey: Guid(096597fc41af0774aaedec0171d8566b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/Editor/SampleMetadata.cs using Guid(096597fc41af0774aaedec0171d8566b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96caa801e3c588070ad34a0dccdde18d') in 0.007062 seconds 
+  Import took 0.014847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006227 seconds.
+  path: Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/Editor/SampleSettingsEditor.cs
+  artifactKey: Guid(81f90f56b259f4aba826980c947f4140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/Editor/SampleSettingsEditor.cs using Guid(81f90f56b259f4aba826980c947f4140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac3efaa33cd1de3e97a07cc0762199b') in 0.006968 seconds 
+  Import took 0.014599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013480 seconds.
+  path: Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/SampleSettings.cs
+  artifactKey: Guid(c76bebe14424446cca62c6e29db5054f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/SampleSettings.cs using Guid(c76bebe14424446cca62c6e29db5054f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a407d9407d3e7e0a992b023c24d2439b') in 0.007021 seconds 
+  Import took 0.014693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019819 seconds.
+  path: Assets/SeaScene/Scripts/Plants.cs
+  artifactKey: Guid(c538d51ded27e634281de5dc3903f125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Scripts/Plants.cs using Guid(c538d51ded27e634281de5dc3903f125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '150fc74ee6440f317f5bc342e6948d3b') in 0.002109 seconds 
+  Import took 0.009814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.048538 seconds.
+  path: Assets/SeaScene/Scripts/Fog.cs
+  artifactKey: Guid(24870ef391de73244a41f4c99ac640d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Scripts/Fog.cs using Guid(24870ef391de73244a41f4c99ac640d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd47bea780eaaaf5714158b1d4505bb4') in 0.006532 seconds 
+  Import took 0.013946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006125 seconds.
+  path: Assets/SeaScene/Scripts/MeshGenerator.cs
+  artifactKey: Guid(df9aabe3a8d5bb14ab9daa65476dcf98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Scripts/MeshGenerator.cs using Guid(df9aabe3a8d5bb14ab9daa65476dcf98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd654e3481557a8527f708ba19979674d') in 0.006535 seconds 
+  Import took 0.014507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012970 seconds.
+  path: Assets/SeaScene/Materials/Terrain.mat
+  artifactKey: Guid(c7ffdd8260fb258458ff296da3385be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Materials/Terrain.mat using Guid(c7ffdd8260fb258458ff296da3385be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e25a3c48a09e76b1c0b5f125404c7f5') in 0.446529 seconds 
+  Import took 0.454001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006827 seconds.
+  path: Assets/SeaScene/Tomek/HandAnimator.controller
+  artifactKey: Guid(33fe71673ee6ae640ad99987f7a962d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Tomek/HandAnimator.controller using Guid(33fe71673ee6ae640ad99987f7a962d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '937594dafc13303dac30c8b3f134916f') in 0.010579 seconds 
+  Import took 0.017823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019680 seconds.
+  path: Assets/SeaScene/Scripts/MeshGeneratorBorder.cs
+  artifactKey: Guid(c29afff7d60e1224d9bb5171056936e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Scripts/MeshGeneratorBorder.cs using Guid(c29afff7d60e1224d9bb5171056936e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77a300c430dba8f3541844e9b09d7be1') in 0.006679 seconds 
+  Import took 0.013863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006285 seconds.
+  path: Assets/SeaScene/Tomek/Player.prefab
+  artifactKey: Guid(125867a8dfc098a45b7f455ddb99295c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Tomek/Player.prefab using Guid(125867a8dfc098a45b7f455ddb99295c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3e59b2ce670c82431967501c59fc18') in 0.107183 seconds 
+  Import took 0.114927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010948 seconds.
+  path: Assets/SeaScene/Materials/Textures/Dirt/dirt_lighted_rocks/dirt_lighted_rocks_right.png
+  artifactKey: Guid(168bf79e2688a4547819cac011e4caba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Materials/Textures/Dirt/dirt_lighted_rocks/dirt_lighted_rocks_right.png using Guid(168bf79e2688a4547819cac011e4caba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af46895c717b1991d999bd2a737093c2') in 0.130266 seconds 
+  Import took 0.142273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014194 seconds.
+  path: Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/SampleLoader.cs
+  artifactKey: Guid(7bc0125267fb14445a858e84633a46b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/SampleLoader.cs using Guid(7bc0125267fb14445a858e84633a46b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4964c28ab3484c035e176cf231ad8dc') in 0.006306 seconds 
+  Import took 0.014426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011261 seconds.
+  path: Assets/SeaScene/Scripts/TerrainGenerator.cs
+  artifactKey: Guid(a71ab14a39931464e84c2bdf64b0cfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Scripts/TerrainGenerator.cs using Guid(a71ab14a39931464e84c2bdf64b0cfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11b4288df691641bc17dcb3d1a98112') in 0.006551 seconds 
+  Import took 0.013973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017992 seconds.
+  path: Assets/SeaScene/Scripts/Sonar.cs
+  artifactKey: Guid(8ad3682c9fa36c448b538952781aabf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SeaScene/Scripts/Sonar.cs using Guid(8ad3682c9fa36c448b538952781aabf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af83fea6ba88455c2f9815aa9b2dac18') in 0.006542 seconds 
+  Import took 0.013751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005787 seconds.
+  path: Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/Editor/SampleBuildProcessor.cs
+  artifactKey: Guid(9216d372fe0de4086af31dce05526406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/XR Plugin Management/4.2.1/Example XR Management implementation/Editor/SampleBuildProcessor.cs using Guid(9216d372fe0de4086af31dce05526406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11524c1e9b525511ed61267a69514898') in 0.006472 seconds 
+  Import took 0.013997 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
