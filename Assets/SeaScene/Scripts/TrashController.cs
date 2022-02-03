@@ -8,6 +8,7 @@ public class TrashController : MonoBehaviour
     private XRGrabInteractable interactor = null;
     public bool IsGrabbing;
     private float grabbing_time;
+    public float destroyDepth = -50.0f;
 
     private void Awake()
     {
@@ -19,6 +20,8 @@ public class TrashController : MonoBehaviour
 
     private void Update()
     {
+        if (transform.position.y < destroyDepth)
+            Destroy(transform.gameObject);
         if (interactor.isSelected) 
         {
             if (IsGrabbing)

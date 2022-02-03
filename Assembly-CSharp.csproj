@@ -73,6 +73,8 @@
     <Compile Include="Assets\SeaScene\Scripts\TubeSystemGeneratorController.cs" />
     <Compile Include="Assets\SeaScene\Scripts\TrashController.cs" />
     <Compile Include="Assets\SeaScene\Scripts\TrashGeneratorController.cs" />
+    <Compile Include="Assets\SeaScene\Scripts\Fish.cs" />
+    <Compile Include="Assets\SeaScene\Scripts\Entity.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
