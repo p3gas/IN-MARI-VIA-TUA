@@ -173,16 +173,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   observatorPosition: {fileID: 198227687}
   terrainMaterial: {fileID: 2100000, guid: c7ffdd8260fb258458ff296da3385be5, type: 2}
+  plant1Prefab: {fileID: 1603600605949791252, guid: 2a5c2c8906b538040af2b775809010fa, type: 3}
+  plant2Prefab: {fileID: 2023988195651333891, guid: 6f7d06701a7b94742850e7c8c5050159, type: 3}
+  plant3Prefab: {fileID: 2389717787016299979, guid: 7d141262be9583847bcad52fe5ebbc01, type: 3}
   viewDistance: 40
   Noise: 10
   xNoise: 0.05
   zNoise: 0.05
   xNoiseShift: 1000
   zNoiseShift: 1000
-  xSegmentSize: 50
-  zSegmentSize: 50
-  xSegments: 10
-  zSegments: 10
+  xSegmentSize: 40
+  zSegmentSize: 40
+  xSegments: 3
+  zSegments: 3
 --- !u!1 &653260035
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,24 +437,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165998352}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c538d51ded27e634281de5dc3903f125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xRange: 20
-  zRange: 20
+  terrainGenarator: {fileID: 470298747}
   nPlant1: 10
   nPlant2: 10
   nPlant3: 10
   plant1: {fileID: 919132149155446097, guid: f5d6d4f27f74db4418e7e6077554a269, type: 3}
   plant2: {fileID: 919132149155446097, guid: f5d6d4f27f74db4418e7e6077554a269, type: 3}
   plant3: {fileID: 919132149155446097, guid: f5d6d4f27f74db4418e7e6077554a269, type: 3}
-  Noise: 10
-  xNoise: 0.05
-  zNoise: 0.05
-  xNoiseShift: 1000
-  zNoiseShift: 1000
+  plants1: []
+  plants2: []
+  plants3: []
 --- !u!4 &1369998485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5486686964650944866, guid: 125867a8dfc098a45b7f455ddb99295c, type: 3}
@@ -467,6 +467,10 @@ PrefabInstance:
     - target: {fileID: 4057484151954325435, guid: 125867a8dfc098a45b7f455ddb99295c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057484151954325435, guid: 125867a8dfc098a45b7f455ddb99295c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4057484151954325438, guid: 125867a8dfc098a45b7f455ddb99295c, type: 3}
       propertyPath: m_RootOrder
@@ -699,7 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TerrainGenerator: {fileID: 470298747}
-  MeshGenerator: {fileID: 0}
+  MeshGenerator: {fileID: 2016831364}
   ObservatorPosition: {fileID: 198227687}
 --- !u!4 &2003566724
 Transform:
@@ -715,6 +719,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2016831364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2956632464498315801, guid: 1b3fc15d0a823dd4aab7a9ce039bc12f, type: 3}
+  m_PrefabInstance: {fileID: 803603736}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29afff7d60e1224d9bb5171056936e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056217125
 GameObject:
   m_ObjectHideFlags: 0

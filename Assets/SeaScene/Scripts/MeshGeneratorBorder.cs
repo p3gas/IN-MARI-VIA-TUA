@@ -108,9 +108,10 @@ public class MeshGeneratorBorder : MonoBehaviour
         {
             for (int x = 0; x <= xSize; x++)
             {
-                float y = Mathf.PerlinNoise(x * xNoise + xNoiseShift, z * zNoise + zNoiseShift) * Noise;
-                y = y < 0 ? 0 : y;
-                vertices[i] = new Vector3(x - xSize / 2, y, z - zSize / 2);
+                float px = x - xSize / 2;
+                float pz = x - zSize / 2;
+                float y = Height.GetHeight(x * xNoise + xNoiseShift, z * zNoise + zNoiseShift, Noise);
+                vertices[i] = new Vector3(px, y, pz);
                 uvs[i] = new Vector2(vertices[i].x, vertices[i].z);
                 i++;
             }

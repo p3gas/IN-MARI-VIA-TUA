@@ -6,6 +6,9 @@ public class TerrainGenerator : MonoBehaviour
 {
     public Transform observatorPosition;
     public Material terrainMaterial;
+    public GameObject plant1Prefab;
+    public GameObject plant2Prefab;
+    public GameObject plant3Prefab;
     public float viewDistance = 40.0f;
 
     public float Noise = 10.0f;
@@ -88,6 +91,16 @@ public class TerrainGenerator : MonoBehaviour
                 meshGenerator.xNoiseShift = (x - xSegments / 2) * xSegmentSize * xNoise + xNoiseShift;
                 meshGenerator.zNoiseShift = (z - zSegments / 2) * zSegmentSize * zNoise + zNoiseShift;
                 meshGenerator.hasCollider = true;
+
+                GameObject plantGenerator = new GameObject("Plants");
+                plantGenerator.transform.localPosition = new Vector3((x - xSegments / 2) * xSegmentSize, transform.localPosition.y, (z - zSegments / 2) * zSegmentSize);
+                Plants plants = plantGenerator.AddComponent<Plants>();
+                plants.plant1 = plant1Prefab;
+                plants.plant2 = plant2Prefab;
+                plants.plant3 = plant3Prefab;
+                plants.terrainGenarator = this;
+                plantGenerator.transform.SetParent(terrainFragment.transform);
+
 
                 terrainFragment.transform.SetParent(transform);
                 terrainTable[x, z] = terrainFragment;

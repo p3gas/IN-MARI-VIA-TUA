@@ -69,6 +69,7 @@
     <Compile Include="Assets\SeaScene\Tomek\Hand.cs" />
     <Compile Include="Assets\Samples\XR Plugin Management\4.2.1\Example XR Management implementation\SampleLoader.cs" />
     <Compile Include="Assets\SeaScene\Scripts\Sonar.cs" />
+    <Compile Include="Assets\SeaScene\Scripts\Height.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
