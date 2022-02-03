@@ -4,14 +4,30 @@ using UnityEngine;
 
 public class Fog : MonoBehaviour
 {
+    public Transform headposition;
+    public float dirtiness = 5.0f;
+    public float depth = 0.0f;
+    public float maxDepth = 45.0f;
+
+    public Material skyboxUnderWater;
+    public Material skyboxOverWater;
+
     public Color32 clearWaterColor = new Color32(120, 128, 168, 255);
     public Color32 normalWaterColor = new Color32(99, 134, 147, 255);
     public Color32 dirtyWaterColor = new Color32(97, 130, 114, 255);
-    
-    public float dirtiness = 5;
-    private float oldDirtness = 5;
 
-    private float depth = 0;
+    public float cleanWaterThreshold = 2.0f;
+    public float normalWaterThreshold = 5.0f;
+    public float dirtyWaterThreshold = 8.0f;
+
+    public float cleanWaterDensity = 0.05f;
+    public float normalWaterDensity = 0.1f;
+    public float dirtyWaterDensity = 0.2f;
+    public float maxWaterDensity = 0.3f;
+
+    private Color32 waterColor;
+    private float oldDirtness = 5;
+    private float oldDepth = 0;
 
     void Start()
     {
@@ -20,42 +36,60 @@ public class Fog : MonoBehaviour
 
     void Update()
     {
-        if (oldDirtness != dirtiness)
+        depth = -headposition.position.y;
+        if (oldDirtness != dirtiness || oldDepth != depth)
         {
+            UpdateColor();
+            if (depth > 0)
+            {
+                UpdateFog();
+                skyboxUnderWater.SetColor("_Tint", waterColor);
+                RenderSettings.skybox = skyboxUnderWater; 
+                RenderSettings.fog = true;
+            }
+            else
+            {
+                skyboxOverWater.SetColor("_GroundColor", waterColor);
+                RenderSettings.skybox = skyboxOverWater;
+                RenderSettings.fog = false;
+            }
+            
             oldDirtness = dirtiness;
-            UpdateFog();
+            oldDepth = depth;
         }
     }
+    void UpdateColor()
+    {
+        if (dirtiness < 5)
+            waterColor = Color32.Lerp(clearWaterColor, normalWaterColor, Mathf.Clamp01(dirtiness / 5f));
+        else
+            waterColor = Color32.Lerp(normalWaterColor, dirtyWaterColor, Mathf.Clamp01((dirtiness - 5f) / 5f));
+    }
+
 
     void UpdateFog()
     {
-        if (dirtiness < 2)
-        {
-            RenderSettings.fogColor = clearWaterColor;
-            RenderSettings.fogMode = FogMode.ExponentialSquared;
-            RenderSettings.fogDensity = dirtiness / 20.0f;
-            RenderSettings.fog = true;
-        }
-        else if (dirtiness < 5)
-        {
-            RenderSettings.fogColor = normalWaterColor;
-            RenderSettings.fogMode = FogMode.ExponentialSquared;
-            RenderSettings.fogDensity = dirtiness / 18.0f;
-            RenderSettings.fog = true;
-        }
-        else if (dirtiness < 7)
-        {
-            RenderSettings.fogColor = dirtyWaterColor;
-            RenderSettings.fogMode = FogMode.Exponential;
-            RenderSettings.fogDensity = dirtiness / 15.0f;
-            RenderSettings.fog = true;
-        }
+        //Water - Fog density
+        float fogDensity;
+        if (dirtiness < cleanWaterThreshold)
+            fogDensity = cleanWaterDensity + (dirtiness / (cleanWaterThreshold / (normalWaterDensity - cleanWaterDensity)));
+        else if (dirtiness < normalWaterThreshold)
+            fogDensity = normalWaterDensity + ((dirtiness - cleanWaterThreshold) / ((normalWaterThreshold - cleanWaterThreshold) / (dirtyWaterDensity - normalWaterDensity)));
+        else if (dirtiness < dirtyWaterThreshold)
+            fogDensity = dirtyWaterDensity + ((dirtiness - normalWaterThreshold) / ((dirtyWaterThreshold - normalWaterThreshold) / (maxWaterDensity - dirtyWaterDensity)));
         else
-        {
-            RenderSettings.fogColor = dirtyWaterColor;
+            fogDensity = maxWaterDensity;
+
+        fogDensity = cleanWaterDensity + fogDensity * (depth / maxDepth);
+
+        //Fog mode
+        if (dirtiness < normalWaterThreshold)
             RenderSettings.fogMode = FogMode.Exponential;
-            RenderSettings.fogDensity = dirtiness / 10.0f;
-            RenderSettings.fog = true;
-        }
+        else
+            RenderSettings.fogMode = FogMode.ExponentialSquared;
+
+        //Assigment
+        RenderSettings.fogColor = waterColor;
+        RenderSettings.fogDensity = fogDensity;
     }
 }
