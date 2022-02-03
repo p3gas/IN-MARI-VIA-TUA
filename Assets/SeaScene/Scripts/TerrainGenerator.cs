@@ -9,6 +9,8 @@ public class TerrainGenerator : MonoBehaviour
     public GameObject plant1Prefab;
     public GameObject plant2Prefab;
     public GameObject plant3Prefab;
+    public GameObject[] TrashesPrefab;
+    public GameObject TubePrefab;
     public float viewDistance = 40.0f;
 
     public float Noise = 10.0f;
@@ -101,6 +103,20 @@ public class TerrainGenerator : MonoBehaviour
                 plants.terrainGenarator = this;
                 plantGenerator.transform.SetParent(terrainFragment.transform);
 
+                GameObject trashGenerator = new GameObject("Trashes");
+                trashGenerator.transform.localPosition = new Vector3((x - xSegments / 2) * xSegmentSize, transform.localPosition.y, (z - zSegments / 2) * zSegmentSize);
+                TrashGeneratorController trashes = trashGenerator.AddComponent<TrashGeneratorController>();
+                trashes.TrashesPrefab = TrashesPrefab;
+                trashes.terrainGenarator = this;
+                trashGenerator.transform.SetParent(terrainFragment.transform);
+
+
+                GameObject tubeGenerator = new GameObject("Tubes");
+                tubeGenerator.transform.localPosition = new Vector3((x - xSegments / 2) * xSegmentSize, transform.localPosition.y, (z - zSegments / 2) * zSegmentSize);
+                TubeSystemGeneratorController tube = tubeGenerator.AddComponent<TubeSystemGeneratorController>();
+                tube.TubePrefab = TubePrefab;
+                tube.terrainGenarator = this;
+                tubeGenerator.transform.SetParent(terrainFragment.transform);
 
                 terrainFragment.transform.SetParent(transform);
                 terrainTable[x, z] = terrainFragment;

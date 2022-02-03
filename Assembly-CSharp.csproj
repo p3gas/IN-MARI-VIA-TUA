@@ -70,6 +70,9 @@
     <Compile Include="Assets\Samples\XR Plugin Management\4.2.1\Example XR Management implementation\SampleLoader.cs" />
     <Compile Include="Assets\SeaScene\Scripts\Sonar.cs" />
     <Compile Include="Assets\SeaScene\Scripts\Height.cs" />
+    <Compile Include="Assets\SeaScene\Scripts\TubeSystemGeneratorController.cs" />
+    <Compile Include="Assets\SeaScene\Scripts\TrashController.cs" />
+    <Compile Include="Assets\SeaScene\Scripts\TrashGeneratorController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
